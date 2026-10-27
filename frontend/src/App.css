@@ -1,0 +1,247 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #20243a;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 35px 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  background: #635bdb;
+  color: white;
+  border-radius: 15px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 5px 0 0;
+  color: #777b91;
+}
+
+.summary {
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  color: white;
+  background: linear-gradient(120deg, #635bdb, #8975ed);
+  box-shadow: 0 8px 25px #635bdb25;
+}
+
+.summary p {
+  margin: 0 0 10px;
+  opacity: 0.9;
+}
+
+.summary h2 {
+  margin: 0 0 10px;
+  font-size: 36px;
+}
+
+.summary span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 18px #20243a08;
+}
+
+.panel h2 {
+  margin: 0 0 22px;
+  font-size: 20px;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.expense-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.expense-form input,
+.expense-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dfe2ec;
+  border-radius: 9px;
+  outline: none;
+  background: white;
+  color: #20243a;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  border-color: #635bdb;
+  box-shadow: 0 0 0 3px #635bdb15;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #635bdb;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.form-actions button:hover {
+  background: #5148c5;
+}
+
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form-actions .cancel {
+  background: #ececf4;
+  color: #33364d;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #eceef4;
+  white-space: nowrap;
+}
+
+th {
+  color: #777b91;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+td {
+  font-size: 14px;
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #efedff;
+  color: #635bdb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.amount {
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #efedff;
+  color: #635bdb;
+}
+
+.delete {
+  background: #fff0f0;
+  color: #dc4545;
+}
+
+.empty {
+  padding: 24px 0;
+  text-align: center;
+  color: #85899c;
+}
+
+.error {
+  color: #d62828;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 22px 14px;
+  }
+
+  .expense-form {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+  .summary h2 {
+    font-size: 30px;
+  }
+}
